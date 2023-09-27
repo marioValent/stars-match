@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOMServer from 'react-dom/server';
 
-import StarMatch from '../components/StarMatch';
+import App from '../App';
 
 export async function serverRenderer() {
   const initialData = {
@@ -15,7 +15,7 @@ export async function serverRenderer() {
   return Promise.resolve({
     initialData,
     initialMarkup: ReactDOMServer.renderToString(
-      <StarMatch initialData={initialData} />,
+      <App initialData={initialData} />,
     ),
     pageData,
   });
